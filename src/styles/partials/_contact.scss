@@ -1,0 +1,36 @@
+.contact {
+  &__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem 4rem 0.5rem;
+  }
+
+  &__div_title {
+    margin-bottom: 1rem;
+  }
+
+  &__div_text {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  &__div_links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__div_links a svg {
+    font-size: 1.6em;
+    border-radius: 50%;
+    border: 1px solid $clr-dark-pink;
+    padding: 0.6em 0.6em;
+    color: $clr-dark-pink;
+  }
+
+  &__div_links a svg:hover {
+    color: $clr-dark;
+    border-color: $clr-dark;
+  }
+}

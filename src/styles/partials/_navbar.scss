@@ -1,0 +1,169 @@
+.header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  transition: all 0.4s ease-in-out;
+
+  &__bg {
+    background-color: $clr-dark;
+  }
+
+  &__text {
+    color: white;
+  }
+}
+
+.navbar_custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+
+  &__div {
+    padding: 0.78rem 2rem;
+  }
+
+  &__logo {
+    font-family: "Pacifico", cursive;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+  }
+
+  &__logo:hover {
+    color: $clr-dark-pink;
+  }
+}
+
+#toggle {
+  display: none;
+}
+
+/* Hamburger */
+
+.hamburger {
+  position: absolute;
+  top: 0.9rem;
+  right: 2rem;
+  z-index: 5;
+
+  &__div {
+    position: relative;
+    width: 2em;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $clr-dark;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__color {
+    background-color: white;
+  }
+}
+
+.navbar_wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $clr-pink;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.navbar_link {
+  position: relative;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-top: 1.25em;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.navbar_link:before {
+  content: "";
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: white;
+  transition: all 0.2s ease-out;
+  margin-bottom: -5px;
+}
+
+.navbar_link:hover {
+  color: white;
+}
+
+.navbar_link:hover:before {
+  width: 100%;
+}
+
+/* Animations */
+#toggle:checked + .hamburger .hamburger_top {
+  transform: rotate(-45deg);
+  margin-top: 1em;
+}
+
+#toggle:checked + .hamburger .hamburger_bottom {
+  margin-top: -4px;
+  transform: rotate(45deg);
+}
+
+#toggle:checked + .hamburger + .navbar_wrapper {
+  top: 0;
+}
+
+/* Medium */
+@media (min-width: 576px) {
+  .navbar_custom__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem 2rem 0rem;
+  }
+
+  .navbar_custom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    &__logo {
+      font-size: 1.6em;
+    }
+  }
+
+  .navbar_wrapper {
+    position: relative;
+    width: auto;
+    height: 2.5rem;
+    background-color: transparent;
+    transition: none;
+  }
+
+  .navbar_link {
+    margin: 0 1rem;
+    font-size: 1.2em;
+  }
+
+  .navbar_link:before {
+    margin-bottom: -3px;
+    height: 2px;
+    background-color: $clr-dark-pink;
+  }
+
+  .navbar_link:hover {
+    color: $clr-dark-pink;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

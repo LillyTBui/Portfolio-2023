@@ -1,0 +1,80 @@
+.welcome {
+  &__div {
+    margin: 2rem 1rem 4rem 1rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "Pacifico", cursive;
+    margin: 1rem 0;
+    font-size: 2em;
+  }
+
+  &__img {
+    max-width: 60%;
+    height: auto;
+    order: 1;
+  }
+
+  &__text_div {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+
+  &__text {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__btn {
+    border: 1px solid $clr-dark;
+    padding: 0.5rem 1rem;
+    background-color: $clr-dark;
+    color: white;
+  }
+
+  &__btn:hover {
+    background-color: $clr-background-pink;
+    color: $clr-dark;
+  }
+
+  @media (min-width: 768px) {
+    &__div {
+      margin: 4rem 0;
+      grid-template-columns: 45% 60%;
+    }
+
+    &__text_div {
+      display: initial;
+    }
+
+    &__text {
+      max-width: 500px;
+      text-align: left;
+      order: 1;
+    }
+
+    &__img {
+      order: 2;
+    }
+  }
+
+  @media (min-width: 992px) {
+    &__div {
+      margin: 2rem 0;
+    }
+
+    &__title {
+      font-size: 2.1em;
+    }
+
+    &__text {
+      padding-bottom: 3rem;
+    }
+  }
+}

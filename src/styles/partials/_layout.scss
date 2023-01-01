@@ -1,0 +1,63 @@
+// font-family: 'Pacifico', cursive;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Raleway', sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  background-color: $clr-background-pink;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: $clr-dark;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 1.2em;
+  }
+}
