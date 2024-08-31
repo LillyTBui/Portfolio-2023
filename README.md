@@ -19,7 +19,7 @@ Personal portfolio website made in 2022.
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:LillyTBui/portfolio2022.git
+git clone git@github.com:LillyTBui/portfolio2023.git
 ```
 
 2. Install the dependencies:
