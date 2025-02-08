@@ -23,9 +23,9 @@ function HomeSkills() {
           <div className="skills__item">
             <h3>Backend</h3>
             <ul>
+              <li>Java</li>
               <li>Python</li>
               <li>WordPress</li>
-              <li>Strapi</li>
             </ul>
           </div>
           <div className="skills__item">
