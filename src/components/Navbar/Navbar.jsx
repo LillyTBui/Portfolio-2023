@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -22,14 +22,14 @@ function Navbar() {
   return (
     <header className={color ? "header header__bg" : "header"}>
       <div className="navbar_custom__div">
-        <Link
-          to="/#home"
+        <AnchorLink
+          href="#home"
           className={
             color ? "navbar_custom__logo header__text" : "navbar_custom__logo "
           }
         >
           Lilly Thi Bui
-        </Link>
+        </AnchorLink>
         <input
           id="toggle"
           type="checkbox"
@@ -54,20 +54,20 @@ function Navbar() {
         </label>
         <div className="navbar_wrapper">
           <nav className="navbar_custom">
-            <Link
-              to="/#projects"
+            <AnchorLink
+              href="#projects"
               className={color ? "navbar_link header__text" : "navbar_link "}
               onClick={handleToggle}
             >
               Prosjekter
-            </Link>
-            <Link
-              to="/#contact"
+            </AnchorLink>
+            <AnchorLink
+              href="#contact"
               className={color ? "navbar_link header__text" : "navbar_link "}
               onClick={handleToggle}
             >
               Kontakt
-            </Link>
+            </AnchorLink>
           </nav>
         </div>
       </div>
