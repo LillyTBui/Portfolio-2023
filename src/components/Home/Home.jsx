@@ -18,10 +18,9 @@ function Home() {
               Hei, jeg heter Lilly <span>&#128075;</span>
             </h1>
             <p className="welcome__text">
-              Ferdig utdannet webutvikler fra Noroff School of technology and
-              digital media. Jeg interesserer meg for programmering og bygger
-              videre på utdannelsen min ved å starte på en bachelor i
-              datateknologi ved UIB.
+              Jeg er nylig ferdig med en bachelorgrad i datateknologi ved UIB,
+              og har fagskolegrad i webutvikling fra Noroff. På fritiden liker
+              jeg å spille, reise og strikke.
             </p>
             <AnchorLink href="#projects" className="welcome__btn">
               Prosjekter
