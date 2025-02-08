@@ -8,18 +8,14 @@ import ProjectHappyTourist from "./components/Projects/ProjectHappyTourist";
 import ProjectMuseum from "./components/Projects/ProjectMuseum";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import { useEffect } from "react";
+import ScrollManager from "./ScrollManager";
 
 function App() {
-  // disable scrolling
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = "auto";
-  }, []);
-
   return (
     <Router>
       <Navbar />
       <main>
+        <ScrollManager />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
