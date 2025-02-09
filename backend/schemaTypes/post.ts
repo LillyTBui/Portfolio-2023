@@ -20,14 +20,24 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: 'bigImage',
+      title: 'big image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'mediumImage',
+      title: 'medium image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'smallImage',
+      title: 'small image',
       type: 'image',
       options: {
         hotspot: true,
@@ -43,6 +53,27 @@ export default defineType({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+    }),
+    defineField({
+      name: 'websiteLink',
+      title: 'website link',
+      type: 'string',
+    }),
+    defineField({
+      name: 'githubLink',
+      title: 'github link',
+      type: 'string',
+    }),
+    defineField({
+      name: 'techonology',
+      title: 'technology',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [{name: 'technology', type: 'string', title: 'technology'}],
+        },
+      ],
     }),
     defineField({
       name: 'body',
