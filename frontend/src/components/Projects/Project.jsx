@@ -50,7 +50,7 @@ function Project() {
           <ul>
             <li>
               <span>Type: </span>
-              {project.type}
+              {project.categories[0]}
             </li>
             <li>
               <span>Laget: </span>

@@ -34,7 +34,7 @@ app.get('/api/projects', async (req, res) => {
 app.get('/api/projects/:slug', async (req, res) => {
   const {slug} = req.params
   try {
-    const query = `*[_type == "post" && slug.current == $slug][0] {..., "slug": slug.current}`
+    const query = `*[_type == "post" && slug.current == $slug][0] {..., "slug": slug.current, "categories": categories[] -> title}`
     const project = await client.fetch(query, {slug})
     res.json(project)
   } catch (error) {
