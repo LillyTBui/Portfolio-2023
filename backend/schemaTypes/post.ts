@@ -44,6 +44,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'altImage',
+      title: 'alternate text for image',
+      type: 'string',
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
@@ -52,7 +57,12 @@ export default defineType({
     defineField({
       name: 'publishedAt',
       title: 'Published at',
-      type: 'datetime',
+      type: 'string',
+    }),
+    defineField({
+      name: 'type',
+      title: 'type',
+      type: 'string',
     }),
     defineField({
       name: 'websiteLink',
@@ -78,6 +88,11 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Body',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'description',
+      title: 'description',
       type: 'blockContent',
     }),
   ],

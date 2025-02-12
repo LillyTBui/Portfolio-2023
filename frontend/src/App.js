@@ -9,6 +9,7 @@ import ProjectMuseum from "./components/Projects/ProjectMuseum";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ScrollManager from "./ScrollManager";
+import Project from "./components/Projects/Project";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/holidaze" element={<ProjectHolidaze />} />
+          <Route path="/projects/:slug" element={<Project />} />
+          {/* <Route path="/projects/holidaze" element={<ProjectHolidaze />} />
           <Route path="/projects/duckSurfer" element={<ProjectDuckSurfer />} />
           <Route
             path="/projects/happyTourist"
@@ -28,7 +30,7 @@ function App() {
           <Route
             path="/projects/communityScienceMuseum"
             element={<ProjectMuseum />}
-          />
+          /> */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
