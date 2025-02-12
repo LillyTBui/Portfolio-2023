@@ -54,7 +54,7 @@ function Project() {
             </li>
             <li>
               <span>Laget: </span>
-              {project.publishedAt}
+              {project.made}
             </li>
             <li>
               <a

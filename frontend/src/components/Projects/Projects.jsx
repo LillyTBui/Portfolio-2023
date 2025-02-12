@@ -15,7 +15,6 @@ function Projects() {
         const response = await fetch("http://localhost:3001/api/projects");
         const data = await response.json();
         setProjects(data);
-        console.log(data);
       } catch (error) {
         console.log("error fetching data:", error);
       }
@@ -44,7 +43,7 @@ function Projects() {
               </Link>
               <div className="project__item_text">
                 <h3 className="project__item_title">{project.title}</h3>
-                <p className="project__item_year">{project.publishedAt}</p>
+                <p className="project__item_year">{project.made}</p>
                 <div className="project__item_text-description">
                   <PortableText value={project.description} />
                 </div>

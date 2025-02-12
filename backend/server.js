@@ -20,7 +20,9 @@ app.use(cors()) // allow requests from frontend
 // API route to fetch all projects from Sanity
 app.get('/api/projects', async (req, res) => {
   try {
-    const projects = await client.fetch('*[_type == "post"] {..., "slug": slug.current}') // fetch Sanity data
+    const projects = await client.fetch(
+      '*[_type == "post"] | order(publishedAt desc) {..., "slug": slug.current}',
+    ) // fetch Sanity data
     res.json(projects)
   } catch (error) {
     console.error('Error fetching projects:', error)
