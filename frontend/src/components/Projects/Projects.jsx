@@ -12,7 +12,9 @@ function Projects() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/projects");
+        const response = await fetch(
+          process.env.REACT_APP_API_ENDPOINT + "/api/projects"
+        );
         const data = await response.json();
         setProjects(data);
       } catch (error) {

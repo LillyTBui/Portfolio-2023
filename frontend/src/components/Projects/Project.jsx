@@ -18,7 +18,7 @@ function Project() {
     const fetchProject = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/api/projects/${slug}`
+          process.env.REACT_APP_API_ENDPOINT + `/api/projects${slug}`
         );
         const data = await response.json();
         setProject(data);
