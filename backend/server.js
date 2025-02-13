@@ -15,7 +15,14 @@ const client = createClient({
 const app = express()
 const PORT = process.env.PORT || 3333
 
-app.use(cors()) // allow requests from frontend
+const allowedOrigin = process.env.WEBSITE // only allow request from my homepage
+app.use(
+  cors({
+    origin: allowedOrigin,
+    methods: ['GET'],
+    credentials: true,
+  }),
+)
 
 // API route to fetch all projects from Sanity
 app.get('/api/projects', async (req, res) => {
@@ -44,6 +51,6 @@ app.get('/api/projects/:slug', async (req, res) => {
 })
 
 // start server
-app.listen(PORT, () => {
-  console.log(`🚀 Backend running on http://localhost:${PORT}`)
-})
+// app.listen(PORT, () => {
+//   console.log(`🚀 Backend running on http://localhost:${PORT}`)
+// })
